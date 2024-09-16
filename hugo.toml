@@ -1,0 +1,23 @@
+baseURL = "http://example.org/"
+languageCode = "ja-jp"
+title = "My New Hugo Site"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
+
+[[menu.main]]
+  identifier = "tag1"
+  name = "Tag1"
+  url = "/tags/tag1/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tag2"
+  name = "Tag2"
+  url = "/tags/tag2/"
+  weight = 20

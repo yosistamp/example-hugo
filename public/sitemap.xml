@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-09-16T12:04:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tag2/</loc>
+    <lastmod>2024-09-16T12:04:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-09-16T12:04:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/node1-2-2/</loc>
+    <lastmod>2024-09-16T12:04:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/node1-2-1/</loc>
+    <lastmod>2024-09-16T12:03:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/node1-2/</loc>
+    <lastmod>2024-09-16T12:02:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tag1/</loc>
+    <lastmod>2024-09-16T12:01:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/node1-1/</loc>
+    <lastmod>2024-09-16T12:01:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/node1/</loc>
+    <lastmod>2024-09-16T12:00:00+09:00</lastmod>
+  </url>
+</urlset>
