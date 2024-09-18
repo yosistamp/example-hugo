@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet">
     <link href="/css/tailwind.css" rel="stylesheet">
+    <script src="/js/treeData.js"></script>
     <script src="/js/main.js"></script>
 </head>
 <body class="flex flex-col h-screen">
@@ -17,6 +18,9 @@
                 <input type="text" id="search" placeholder="検索" class="input input-bordered input-sm">
                 <a href="#" class="btn btn-sm" onclick="filterByTag('tag1')">Tag1</a>
                 <a href="#" class="btn btn-sm" onclick="filterByTag('tag2')">Tag2</a>
+                <a href="#" class="btn btn-sm" onclick="filterByStatus('情報収集')">情報収集</a>
+                <a href="#" class="btn btn-sm" onclick="filterByStatus('経験有')">経験有</a>
+                <a href="#" class="btn btn-sm" onclick="filterByStatus('取組中')">取組中</a>
             </div>
         </div>
     </header>
@@ -28,6 +32,5 @@
             <iframe id="content-frame" class="w-full h-full border-none" src="{{ .Permalink }}"></iframe>
         </main>
     </div>
-    <script src="/js/main.js"></script>
 </body>
 </html>
