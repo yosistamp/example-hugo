@@ -25,6 +25,7 @@ function initializeSidebar() {
   sidebar.appendChild(ul);
 }
 
+// ツリーのJSONから検索を行う
 function searchTree(query) {
   const results = [];
   function search(node) {
@@ -39,30 +40,10 @@ function searchTree(query) {
   return results;
 }
 
-function displaySearchResults(results) {
-  const contentFrame = document.getElementById('content-frame');
-  const doc = contentFrame.contentDocument || contentFrame.contentWindow.document;
-  doc.open();
-  doc.write('<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">');
-  results.forEach(node => {
-    doc.write(`
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title">${node.name}</h2>
-          <div class="card-actions justify-end">
-            <a href="/${node.category}" class="btn btn-primary">詳細を見る</a>
-          </div>
-        </div>
-      </div>
-    `);
-  });
-  doc.write('</div>');
-  doc.close();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   initializeSidebar();
 
+  // テキスト検索に入力されたときのイベントリスナー
   const searchInput = document.getElementById('search');
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value;
@@ -70,16 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const results = searchTree(query);
       displaySearchResults(results);
     } else {
-      initializeSidebar();
+      //initializeSidebar();
     }
   });
 });
 
+// タグフィルタリング
 function filterByTag(tag) {
   const nodes = searchTreeByTag(tag);
   displaySearchResults(nodes);
 }
 
+// タグ検索
 function searchTreeByTag(tag) {
   const result = [];
   function search(node) {
@@ -94,11 +77,13 @@ function searchTreeByTag(tag) {
   return result;
 }
 
+// ステータスフィルタリング
 function filterByStatus(status) {
   const nodes = searchTreeByStatus(status);
   displaySearchResults(nodes);
 }
 
+// ステータス検索
 function searchTreeByStatus(status) {
   const result = [];
   function search(node) {
@@ -113,6 +98,7 @@ function searchTreeByStatus(status) {
   return result;
 }
 
+// 検索結果表示
 function displaySearchResults(results) {
   const contentFrame = document.getElementById('content-frame');
   const doc = contentFrame.contentDocument || contentFrame.contentWindow.document;
@@ -131,5 +117,6 @@ function displaySearchResults(results) {
     `);
   });
   doc.write('</div>');
+  doc.write('<link href="/css/tailwind.css" rel="stylesheet">');
   doc.close();
 }
